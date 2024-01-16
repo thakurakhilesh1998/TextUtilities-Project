@@ -4,35 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Utility</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Text Utility</h1>
-        <textarea id="textInput" placeholder="Enter your text here..."></textarea>
-        <div class="controls">
-            <input type="text" id="findText" placeholder="Find">
-            <input type="text" id="replaceText" placeholder="Replace">
-            <button id="findReplaceBtn">Find and Replace</button>
-            <button id="reverseTextBtn">Reverse Text</button>
-            <button id="uppercaseBtn">Uppercase</button>
-            <button id="lowercaseBtn">Lowercase</button>
-            <button id="countWordsBtn">Count Words</button>
-            <button id="countCharactersBtn">Count Characters</button>
-            <button id="removeDuplicatesBtn">Remove Duplicates</button>
-            <button id="sortTextBtn">Sort Text</button>
-            <button id="generateLoremIpsumBtn">Generate Lorem Ipsum</button>
-            <button id="encodeBase64Btn">Encode Base64</button>
-            <button id="decodeBase64Btn">Decode Base64</button>
-            <button id="compressTextBtn">Compress Text</button>
-            <button id="decompressTextBtn">Decompress Text</button>
-            <button id="clearTextBtn">Clear Text</button>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Text Utility</a>
         </div>
-        <div id="result"></div>
+    </nav>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-8">
+                <textarea class="form-control" id="textInput" placeholder="Enter your text here..." rows="14"></textarea>
+            </div>
+            <div class="col-md-4">
+                <div class="controls">
+                    <button id="findReplaceBtn" class="btn btn-primary mt-2">Find and Replace</button>
+                    <button id="reverseTextBtn" class="btn btn-secondary mt-2">Reverse Text</button>
+                    <button id="uppercaseBtn" class="btn btn-info mt-2">Uppercase</button>
+                    <button id="lowercaseBtn" class="btn btn-info mt-2">Lowercase</button>
+                    <button id="countWordsBtn" class="btn btn-success mt-2">Count Words</button>
+                    <button id="countCharactersBtn" class="btn btn-success mt-2">Count Characters</button>
+                    <button id="removeDuplicatesBtn" class="btn btn-warning mt-2">Remove Duplicates</button>
+                    <button id="sortTextBtn" class="btn btn-warning mt-2">Sort Text</button>
+                    <button id="generateLoremIpsumBtn" class="btn btn-primary mt-2">Generate Lorem Ipsum</button>
+                    <button id="encodeBase64Btn" class="btn btn-secondary mt-2">Encode Base64</button>
+                    <button id="decodeBase64Btn" class="btn btn-info mt-2">Decode Base64</button>
+                    <button id="compressTextBtn" class="btn btn-success mt-2">Compress Text</button>
+                    <button id="decompressTextBtn" class="btn btn-warning mt-2">Decompress Text</button>
+                    <button id="clearTextBtn" class="btn btn-danger mt-2">Clear Text</button>
+                </div>
+            </div>
+        </div>
+        <div id="result" class="mt-4"></div>
     </div>
+    <div class="m-3">
+        <div class="card text-center">
+            <h3>About</h3>
+            <p class="text-center p-3">Welcome to the Text Utility Web Application – your go-to platform for effortless text manipulation. Whether you're a writer, coder, or student, our user-friendly interface allows you to perform various operations on your text with ease.
+                Explore features such as finding and replacing text, reversing text order, changing case, counting words and characters, removing duplicates, sorting text, generating Lorem Ipsum, and encoding/decoding in Base64. Additionally, you can compress and decompress text, or simply clear your workspace.
+                Our intuitive design ensures smooth navigation on desktops, tablets, and mobiles. Simply input your text, choose an operation, click the corresponding button, and view the instant results. Enhance your text editing experience with Text Utility – where manipulation meets simplicity. Start crafting your text effortlessly today!</p>
+        </div>
+    </div>
+   
 
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2024 Text Utility</p>
+    </footer>
+
+    <!-- Add Bootstrap JS and Popper.js (required for Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 
 </body>
