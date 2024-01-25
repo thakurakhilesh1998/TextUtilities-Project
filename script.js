@@ -49,11 +49,27 @@ $(document).ready(function() {
 
     // Find and Replace
     $('#findReplaceBtn').on('click', function() {
-        var findText = $('#findText').val();
-        var replaceText = $('#replaceText').val();
+        $('#findReplaceInputs').toggle();
+        var findText = $('#searchInput').val();
+        var replaceText = $('#replaceInput').val();
         var text = $('#textInput').val();
         var replacedText = text.replace(new RegExp(findText, 'g'), replaceText);
         $('#result').text('Replaced Text: ' + replacedText);
+    });
+
+    $('#findbtn').on('click',function()
+    {
+
+    });
+
+    $('#replacebtn').on('click',function()
+    {
+        var findText = $('#searchInput').val();
+        var replaceText = $('#replaceInput').val();
+        var text = $('#textInput').val();
+        var replacedText = text.replace(new RegExp(findText, 'g'), replaceText);
+        $('#result').text('Replaced Text: ' + replacedText);
+        $('#textInput').val(replacedText);
     });
 
     // Add other features here...

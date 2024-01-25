@@ -35,6 +35,19 @@
             <div class="col-md-4">
                 <div class="controls">
                     <button id="findReplaceBtn" class="btn btn-primary mt-2">Find and Replace</button>
+                      <!-- Add input boxes for search and replace -->
+                      <div id="findReplaceInputs" style="display: none;">
+                            <label for="searchInput">Search:</label>
+                            <div>
+                                <input type="text" id="searchInput" class="form-control mb-2" placeholder="Enter text to search">
+                                <button id="findbtn" class="btn btn-sm btn-primary">Find</button>
+                            </div>
+                            <label for="replaceInput">Replace:</label>
+                            <div>
+                            <input type="text" id="replaceInput" class="form-control mb-2" placeholder="Enter text to replace">
+                            <button id="replacebtn" class="btn btn-sm btn-info">Replace</button>
+                            </div>
+                        </div>
                     <button id="reverseTextBtn" class="btn btn-secondary mt-2">Reverse Text</button>
                     <button id="uppercaseBtn" class="btn btn-info mt-2">Uppercase</button>
                     <button id="lowercaseBtn" class="btn btn-info mt-2">Lowercase</button>
