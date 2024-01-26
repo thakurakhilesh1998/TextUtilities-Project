@@ -1,4 +1,24 @@
 $(document).ready(function() {
+
+    $('#copyBtn').on('click',function()
+    {
+        // Get the text content of the result div
+        var resultContent = $("#result").text();
+        // Create a temporary textarea element
+        var tempTextArea = $("<textarea>");
+        tempTextArea.val(resultContent);
+        // Append the textarea to the body
+        $("body").append(tempTextArea);
+        // Select the text in the textarea
+        tempTextArea.select();
+        tempTextArea[0].setSelectionRange(0, 99999); // For mobile devices
+        // Copy the selected text to the clipboard
+        document.execCommand("copy");
+        // Remove the temporary textarea
+        tempTextArea.remove();
+        // Provide some visual feedback (optional)
+        alert("Copied to clipboard: " + resultContent);
+    });
     function updateCharacterCount() {
         var text = $('#textInput').val();
         var charCount = text.length;
